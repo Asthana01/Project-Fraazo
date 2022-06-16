@@ -8,17 +8,20 @@
     <style>
         body{
             box-sizing: border-box;
-            background-color: whitesmoke;
             font-family: sans-serif;
+            background-image: url(sweettexture.jpg) blue;
+            background-color: #cccccc;;
         }
         #container{
             /* border: 1px solid red; */
             width: 25%;
-            margin: 200px auto;
+            margin: auto;
+            margin-top: 100px;
             padding: 25px 45px;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
             border-radius: 20px;
             background-color: white;
+            
         }
         h2{
             margin-bottom: -15px;
@@ -45,12 +48,17 @@
             border: none;
             width: 50%;
             margin: auto;
-            background-color: #43c6ac;
+            background-color: #86d5c2;
             color: white;
             font-weight: bold;
             border-radius: 30px;
             cursor: pointer;
         }
+
+        #container>form>#button:hover{
+            background-color: #43c6ac;
+        }
+
         p{
             margin-top: 50px;
             text-align: center;
@@ -79,6 +87,7 @@
 
 <script>
     let arr = JSON.parse(localStorage.getItem("mydata")) || [];
+    console.log(arr)
     let form = document.querySelector("form")
     form.addEventListener("submit",loginFunc)
 
@@ -91,7 +100,7 @@
         if(checkLogin(loginObj.email,loginObj.password) === true){
             localStorage.setItem("loginLs",JSON.stringify(loginObj));
             alert("Login Successful")
-            // window.location.href ="product.html" 
+            window.location.href ="navbar.html" 
         }
         else{
             alert("Invalid Email or Password");
@@ -100,7 +109,7 @@
 
     function checkLogin(email,password){
         let filtered = arr.filter(function(el){
-            return el.email === email && el.password === password;
+            return el.emaiL === email && el.Password === password;
         })
         if(filtered.length>0){
             return true;

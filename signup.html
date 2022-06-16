@@ -68,14 +68,20 @@ form>label{
   } 
   #submit{
     margin-top: 20px;
-    width: 330px;
+    width: 305px;
     height: 40px;
-    margin-left: 30px;
+    margin-left: 40px;
     border-radius: 5px;
     color: white;
     background-color: #86d5c2;
 border: 0px solid white;
+cursor: pointer;
   }  
+
+  #submit:hover{
+    background-color: #5dc6ad;
+  }
+
   form>div{
 margin-top: -26px;
 margin-left: 270px;
@@ -93,11 +99,11 @@ margin-left: 270px;
         <h2>Welcome to Fraazo!</h2>
         <h3>Sign Up</h3>
         <label >Full name</label><br />
-        <input type="text" placeholder="Enter your Full name" id="name"><br />
+        <input type="text" placeholder="Enter your Full name" id="name" required><br />
         <label for="">Email</label><br />
-        <input type="text" placeholder="Enter email" id="email"><br />
+        <input type="text" placeholder="Enter email" id="email" required><br />
         <label for="">Password</label><br />
-        <input type="text" placeholder="Enter Password" id="pass"><br />
+        <input type="text" placeholder="Enter Password" id="pass" required><br />
       <input type="submit" id="submit">
         <p>By signing up. I accept the Fraazo Terms of Service and acknowledge the Privacy Policy</p>
        
