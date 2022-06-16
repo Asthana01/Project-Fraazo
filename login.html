@@ -78,20 +78,18 @@
 </html>
 
 <script>
+    document.querySelector("form").addEventListener("submit",loginFunc)
     let arr = JSON.parse(localStorage.getItem("mydata")) || [];
-    let form = document.querySelector("form")
-    form.addEventListener("submit",loginFunc)
-
     function loginFunc(event){
         event.preventDefault();
         let loginObj = {
             email: document.querySelector("#email").value,
             password: document.querySelector("#password").value,
         }
-        if(checkLogin(loginObj.email,loginObj.password) === true){
+        if(checkLogin(loginObj.email,loginObj.password) == true){
             localStorage.setItem("loginLs",JSON.stringify(loginObj));
             alert("Login Successful")
-            // window.location.href ="product.html" 
+            window.location.href ="navbar.html" 
         }
         else{
             alert("Invalid Email or Password");
@@ -100,9 +98,9 @@
 
     function checkLogin(email,password){
         let filtered = arr.filter(function(el){
-            return el.email === email && el.password === password;
+            return el.emaiL === emai && el.Password === password;
         })
-        if(filtered.length>0){
+        if(filtered.length > 0){
             return true;
         }
         else{
