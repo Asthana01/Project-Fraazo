@@ -771,8 +771,8 @@
 <script>
   let userName = JSON.parse(localStorage.getItem("mydata"))
   let loginData = JSON.parse(localStorage.getItem("loginLs"))
-  console.log(loginData.email)
-  console.log(userName[0].emaiL);
+  // console.log(loginData.email)
+  // console.log(userName[0].emaiL);g
   for (let i = 0; i < userName.length; i++) {
     if (loginData.email === userName[i].emaiL) {
       document.querySelector("#login").innerText = `Hi, ${userName[i].Name}`
