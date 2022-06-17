@@ -471,7 +471,7 @@
             <!-- <button><img src="data:image/png;base64,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" alt="guest">
                 login</button> -->
 
-                <a href="login.html">login</a>
+                <a id="login" href="login.html">login</a>
                 
         </div>
     </div>
@@ -765,3 +765,8 @@
     </div>
 </body>
 </html>
+<script>
+  let userName = JSON.parse(localStorage.getItem("mydata"))
+  console.log(userName);
+  document.querySelector("#login").innerText = `Hi, ${userName[0].Name}`
+</script>
