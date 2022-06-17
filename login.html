@@ -98,7 +98,7 @@
 
     function checkLogin(email,password){
         let filtered = arr.filter(function(el){
-            return el.emaiL === emai && el.Password === password;
+            return el.emaiL === email && el.Password === password;
         })
         if(filtered.length > 0){
             return true;
