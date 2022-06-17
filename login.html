@@ -9,8 +9,9 @@
         body{
             box-sizing: border-box;
             font-family: sans-serif;
-            background-image: url(sweettexture.jpg) blue;
-            background-color: #cccccc;;
+            /* background-image: url(https://cdn.pixabay.com/photo/2014/08/26/15/22/fruit-428057__340.jpg); */
+            /* background-color: transparent; */
+            /* opacity: 0.5; */
         }
         #container{
             /* border: 1px solid red; */
@@ -20,8 +21,7 @@
             padding: 25px 45px;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
             border-radius: 20px;
-            background-color: white;
-            
+            background-color: white;           
         }
         h2{
             margin-bottom: -15px;
@@ -87,7 +87,7 @@
 
 <script>
     let arr = JSON.parse(localStorage.getItem("mydata")) || [];
-    console.log(arr)
+    // console.log(arr)
     let form = document.querySelector("form")
     form.addEventListener("submit",loginFunc)
 
@@ -100,11 +100,13 @@
         if(checkLogin(loginObj.email,loginObj.password) === true){
             localStorage.setItem("loginLs",JSON.stringify(loginObj));
             alert("Login Successful")
-            window.location.href ="navbar.html" 
+            // window.location.reload();
+            window.location.href = "navbar.html";
         }
         else{
             alert("Invalid Email or Password");
         }
+        form.reset();
     }
 
     function checkLogin(email,password){
