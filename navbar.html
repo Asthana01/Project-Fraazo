@@ -239,6 +239,7 @@
        .box>div{
         width: 280px;
         height: 230px;
+        cursor: pointer;
        }
 
        .box>div>img{
@@ -251,6 +252,7 @@
         margin-top: 20px;
         width: 280px;
         height: 210px;
+        cursor: pointer;
       }
 
       #one-box>img{
@@ -564,10 +566,10 @@
     <div>
       <img src="https://images.fraazo.com/fraazo-prod/web/298.png" alt="mango">
     </div>
-    <div>
+    <div id="fruits">
       <img src="https://images.fraazo.com/fraazo-master/webban/Fruits.png" alt="fruits">
     </div>
-    <div>
+    <div id="vegetable">
       <img src="https://images.fraazo.com/fraazo-master/webban/Vegetables.png" alt="veggies">
     </div>
     <div>
@@ -784,4 +786,11 @@
       document.querySelector("#login").innerText = `Hi, ${userName[i].Name}`;
     }
   }
+
+  document.querySelector(".box>#fruits").addEventListener("click",function(){
+    window.location.href ="fruits.html";
+  })
+  document.querySelector(".box>#vegetable").addEventListener("click",function(){
+    window.location.href="vegetables.html";
+  })
 </script>
